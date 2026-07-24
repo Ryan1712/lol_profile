@@ -48,7 +48,9 @@ def _member(stt, full_name, email, raw_ingame):
     }
 
 
-def import_excel(path=config.EXCEL_PATH):
+def import_excel(path=None):
+    if path is None:
+        path = config.EXCEL_PATH
     wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
     ws = wb.worksheets[0]
     teams = {}          # key normalized name -> team dict
@@ -85,13 +87,17 @@ def import_excel(path=config.EXCEL_PATH):
     }
 
 
-def save_roster(roster, path=config.ROSTER_PATH):
+def save_roster(roster, path=None):
+    if path is None:
+        path = config.ROSTER_PATH
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(roster, f, ensure_ascii=False, indent=2)
 
 
-def load_roster(path=config.ROSTER_PATH):
+def load_roster(path=None):
+    if path is None:
+        path = config.ROSTER_PATH
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
