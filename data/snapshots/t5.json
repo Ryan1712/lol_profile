@@ -1,0 +1,133 @@
+{
+  "team_id": "t5",
+  "team_name": "All Star Cadets",
+  "refreshed_at": "2026-07-24T08:53:26.533065+00:00",
+  "members": {
+    "24": {
+      "riot_id": "#",
+      "puuid": null,
+      "solo": null,
+      "flex": null,
+      "lanes": [],
+      "top_champions": [],
+      "matches_analyzed": 0,
+      "error": "needs_riot_id"
+    },
+    "25": {
+      "riot_id": "#",
+      "puuid": null,
+      "solo": null,
+      "flex": null,
+      "lanes": [],
+      "top_champions": [],
+      "matches_analyzed": 0,
+      "error": "needs_riot_id"
+    },
+    "26": {
+      "riot_id": "seasouth#0711",
+      "puuid": "wTOSPdTmzHuMNHfcf-6MGnedi7hO16xz-CqeUYg7_Tha25myxyrnlubwfoCs5e19Pzr4OPxNi0v2aw",
+      "solo": {
+        "tier": "DIAMOND",
+        "rank": "I",
+        "lp": 57,
+        "wins": 26,
+        "losses": 30
+      },
+      "flex": {
+        "tier": "DIAMOND",
+        "rank": "IV",
+        "lp": 0,
+        "wins": 10,
+        "losses": 13
+      },
+      "lanes": [
+        [
+          "Support",
+          0.9
+        ],
+        [
+          "Jungle",
+          0.06666666666666667
+        ],
+        [
+          "ADC",
+          0.03333333333333333
+        ]
+      ],
+      "top_champions": [
+        {
+          "champion": "Mel",
+          "games": 10,
+          "wins": 4,
+          "winrate": 0.4,
+          "kda": 1.7741935483870968,
+          "k": 9.6,
+          "d": 9.3,
+          "a": 6.9
+        },
+        {
+          "champion": "Pyke",
+          "games": 6,
+          "wins": 4,
+          "winrate": 0.6666666666666666,
+          "kda": 2.185185185185185,
+          "k": 6.5,
+          "d": 9.0,
+          "a": 13.166666666666666
+        },
+        {
+          "champion": "Camille",
+          "games": 2,
+          "wins": 0,
+          "winrate": 0.0,
+          "kda": 1.3448275862068966,
+          "k": 7.5,
+          "d": 14.5,
+          "a": 12.0
+        },
+        {
+          "champion": "JarvanIV",
+          "games": 2,
+          "wins": 0,
+          "winrate": 0.0,
+          "kda": 1.9615384615384615,
+          "k": 7.5,
+          "d": 13.0,
+          "a": 18.0
+        },
+        {
+          "champion": "Nami",
+          "games": 1,
+          "wins": 1,
+          "winrate": 1.0,
+          "kda": 3.4285714285714284,
+          "k": 2.0,
+          "d": 7.0,
+          "a": 22.0
+        }
+      ],
+      "matches_analyzed": 30,
+      "error": null
+    },
+    "27": {
+      "riot_id": "#",
+      "puuid": null,
+      "solo": null,
+      "flex": null,
+      "lanes": [],
+      "top_champions": [],
+      "matches_analyzed": 0,
+      "error": "needs_riot_id"
+    },
+    "28": {
+      "riot_id": "#",
+      "puuid": null,
+      "solo": null,
+      "flex": null,
+      "lanes": [],
+      "top_champions": [],
+      "matches_analyzed": 0,
+      "error": "needs_riot_id"
+    }
+  }
+}

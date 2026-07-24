@@ -1,0 +1,702 @@
+{
+  "imported_at": "2026-07-24T08:57:36.949576+00:00",
+  "source_excel": "D:\\8. AI\\lol\\DS IRON FINGER.xlsx",
+  "teams": [
+    {
+      "id": "t1",
+      "name": "Chưa có đội",
+      "region": "Hà Nội",
+      "members": [
+        {
+          "stt": "1",
+          "full_name": "Dang Tho Chien",
+          "email": "chiendt@rikkeisoft.com",
+          "raw_ingame": "",
+          "game_name": "",
+          "tag_line": "",
+          "status": "needs_riot_id"
+        },
+        {
+          "stt": "2",
+          "full_name": "Tin Tran Dinh",
+          "email": "tintd@rikkeisoft.com",
+          "raw_ingame": "",
+          "game_name": "",
+          "tag_line": "",
+          "status": "needs_riot_id"
+        },
+        {
+          "stt": "3",
+          "full_name": "Hung Dao Nhat",
+          "email": "hungdn3@rikkeisoft.com",
+          "raw_ingame": "",
+          "game_name": "",
+          "tag_line": "",
+          "status": "needs_riot_id"
+        },
+        {
+          "stt": "4",
+          "full_name": "Dat Vu Tuan",
+          "email": "datvt2@rikkeisoft.com",
+          "raw_ingame": "",
+          "game_name": "",
+          "tag_line": "",
+          "status": "needs_riot_id"
+        },
+        {
+          "stt": "5",
+          "full_name": "Tung Phung Xuan",
+          "email": "tungpx@rikkeisoft.com",
+          "raw_ingame": "",
+          "game_name": "",
+          "tag_line": "",
+          "status": "needs_riot_id"
+        },
+        {
+          "stt": "6",
+          "full_name": "Dat Doan Tien",
+          "email": "datdt5@rikkeisoft.com",
+          "raw_ingame": "",
+          "game_name": "",
+          "tag_line": "",
+          "status": "needs_riot_id"
+        },
+        {
+          "stt": "7",
+          "full_name": "Duc Luong Hong",
+          "email": "duclh@rikkeisoft.com",
+          "raw_ingame": "",
+          "game_name": "",
+          "tag_line": "",
+          "status": "needs_riot_id"
+        },
+        {
+          "stt": "x1",
+          "full_name": "Trương Văn Thọ",
+          "email": "thotv@rikkeisoft.com",
+          "raw_ingame": "",
+          "game_name": "",
+          "tag_line": "",
+          "status": "needs_riot_id"
+        }
+      ]
+    },
+    {
+      "id": "t2",
+      "name": "The last dance",
+      "region": "Hà Nội",
+      "members": [
+        {
+          "stt": "8",
+          "full_name": "Dương Đức Huỳnh",
+          "email": "huynhdd@rikkeisoft.com",
+          "raw_ingame": "skuukzky #Huynh",
+          "game_name": "skuukzky",
+          "tag_line": "Huynh",
+          "status": "ok"
+        },
+        {
+          "stt": "9",
+          "full_name": "Trần Minh Hiếu",
+          "email": "hieutm@rikkeisoft.com",
+          "raw_ingame": "Hiếu bò tuôi #9999",
+          "game_name": "Hiếu bò tuôi",
+          "tag_line": "9999",
+          "status": "ok"
+        },
+        {
+          "stt": "10",
+          "full_name": "Đặng Xuân Hoàng",
+          "email": "hoangdx@rikkeisoft.com",
+          "raw_ingame": "Tiên Ông Hái Cà #1423",
+          "game_name": "Tiên Ông Hái Cà",
+          "tag_line": "1423",
+          "status": "ok"
+        },
+        {
+          "stt": "11",
+          "full_name": "Phạm Đức Nam",
+          "email": "nampd@rikkeisoft.com",
+          "raw_ingame": "Shadow Hunter#3107",
+          "game_name": "Shadow Hunter",
+          "tag_line": "3107",
+          "status": "ok"
+        },
+        {
+          "stt": "12",
+          "full_name": "Nguyễn Hoàng Anh",
+          "email": "anhnh6@rikkeisoft.com",
+          "raw_ingame": "LetMeSoloAll #anhnh",
+          "game_name": "LetMeSoloAll",
+          "tag_line": "anhnh",
+          "status": "ok"
+        },
+        {
+          "stt": "13",
+          "full_name": "Nguyễn Trung Kiên",
+          "email": "kiennt8@rikkeisoft.com",
+          "raw_ingame": "kiensun99x #234",
+          "game_name": "kiensun99x",
+          "tag_line": "234",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "id": "t3",
+      "name": "Kiều Lương Tâm",
+      "region": "Hà Nội",
+      "members": [
+        {
+          "stt": "14",
+          "full_name": "Nguyễn Văn Diện",
+          "email": "diennv3@rikkeisoft.com",
+          "raw_ingame": "Rau cải nấu thịt #6677",
+          "game_name": "Rau cải nấu thịt",
+          "tag_line": "6677",
+          "status": "ok"
+        },
+        {
+          "stt": "15",
+          "full_name": "Lê Nam Công Thành",
+          "email": "thanhlnc@rikkeisoft.com",
+          "raw_ingame": "Trái Tay #Dexor",
+          "game_name": "Trái Tay",
+          "tag_line": "Dexor",
+          "status": "ok"
+        },
+        {
+          "stt": "16",
+          "full_name": "Trần Quang Long",
+          "email": "longtq2@rikkeisoft.com",
+          "raw_ingame": "ieatburger#ieb",
+          "game_name": "ieatburger",
+          "tag_line": "ieb",
+          "status": "ok"
+        },
+        {
+          "stt": "17",
+          "full_name": "Nguyễn Hải Đăng",
+          "email": "dangnh@rikkeisoft.com",
+          "raw_ingame": "Mufasa#Hida",
+          "game_name": "Mufasa",
+          "tag_line": "Hida",
+          "status": "ok"
+        },
+        {
+          "stt": "18",
+          "full_name": "Nguyễn Ngọc Hải Hoàn",
+          "email": "hoannnh@rikkeisoft.com",
+          "raw_ingame": "Megumi#加藤恵",
+          "game_name": "Megumi",
+          "tag_line": "加藤恵",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "id": "t4",
+      "name": "Only Farm",
+      "region": "Hà Nội",
+      "members": [
+        {
+          "stt": "19",
+          "full_name": "Nguyễn Hữu Hoàng",
+          "email": "hoangnh@rikkeisoft.com",
+          "raw_ingame": "Hann#196",
+          "game_name": "Hann",
+          "tag_line": "196",
+          "status": "ok"
+        },
+        {
+          "stt": "20",
+          "full_name": "Đỗ Văn Tuấn",
+          "email": "tuandv3@rikkeisoft.com",
+          "raw_ingame": "Đậu Đậu MF#vn2",
+          "game_name": "Đậu Đậu MF",
+          "tag_line": "vn2",
+          "status": "ok"
+        },
+        {
+          "stt": "21",
+          "full_name": "Đào Phúc Hải",
+          "email": "haidp@rikkeisoft.com",
+          "raw_ingame": "Hải Hồ Tây#13112",
+          "game_name": "Hải Hồ Tây",
+          "tag_line": "13112",
+          "status": "ok"
+        },
+        {
+          "stt": "22",
+          "full_name": "Phan Anh Hiếu",
+          "email": "hieupa@rikkeisoft.com",
+          "raw_ingame": "Salt Sad#2810",
+          "game_name": "Salt Sad",
+          "tag_line": "2810",
+          "status": "ok"
+        },
+        {
+          "stt": "23",
+          "full_name": "Vũ Xuân Long",
+          "email": "longvx@rikkeisoft.com",
+          "raw_ingame": "NB Dragonz#lonq",
+          "game_name": "NB Dragonz",
+          "tag_line": "lonq",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "id": "t5",
+      "name": "All Star Cadets",
+      "region": "Hà Nội",
+      "members": [
+        {
+          "stt": "24",
+          "full_name": "Phạm Thế Duyệt",
+          "email": "duyetpt@rikkeisoft.com",
+          "raw_ingame": "Hơi Dại Dột",
+          "game_name": "",
+          "tag_line": "",
+          "status": "needs_riot_id"
+        },
+        {
+          "stt": "25",
+          "full_name": "Hoàng Thế Quyền",
+          "email": "quyenht2@rikkeisoft.com",
+          "raw_ingame": "Làm tý",
+          "game_name": "",
+          "tag_line": "",
+          "status": "needs_riot_id"
+        },
+        {
+          "stt": "26",
+          "full_name": "Lê Minh Khương",
+          "email": "khuonglm@rikkeisoft.com",
+          "raw_ingame": "chloe",
+          "game_name": "",
+          "tag_line": "",
+          "status": "needs_riot_id"
+        },
+        {
+          "stt": "27",
+          "full_name": "Cao Minh Hiển",
+          "email": "hiencm@rikkeisoft.com",
+          "raw_ingame": "CinqJuillet",
+          "game_name": "",
+          "tag_line": "",
+          "status": "needs_riot_id"
+        },
+        {
+          "stt": "28",
+          "full_name": "Đặng Trọng Thiên",
+          "email": "thiendt2@rikkeisoft.com",
+          "raw_ingame": "NoMercy4TheWeak",
+          "game_name": "",
+          "tag_line": "",
+          "status": "needs_riot_id"
+        }
+      ]
+    },
+    {
+      "id": "t6",
+      "name": "G0AT",
+      "region": "Hà Nội",
+      "members": [
+        {
+          "stt": "29",
+          "full_name": "Nguyễn Hữu Hải Nam",
+          "email": "namnhh@rikkeisoft.com",
+          "raw_ingame": "seasouth#0711",
+          "game_name": "seasouth",
+          "tag_line": "0711",
+          "status": "ok"
+        },
+        {
+          "stt": "30",
+          "full_name": "Hoàng Việt Dũng",
+          "email": "dunghv@rikkeisoft.com",
+          "raw_ingame": "PRX Yuu#1014",
+          "game_name": "PRX Yuu",
+          "tag_line": "1014",
+          "status": "ok"
+        },
+        {
+          "stt": "31",
+          "full_name": "Phùng Hải Minh",
+          "email": "minhph2@rikkeisoft.com",
+          "raw_ingame": "Nhacsimongmo#mp2",
+          "game_name": "Nhacsimongmo",
+          "tag_line": "mp2",
+          "status": "ok"
+        },
+        {
+          "stt": "32",
+          "full_name": "Phạm Duy",
+          "email": "duyp@rikkeisoft.com",
+          "raw_ingame": "aaaaaaaaaaaaaaaa#VN171",
+          "game_name": "aaaaaaaaaaaaaaaa",
+          "tag_line": "VN171",
+          "status": "ok"
+        },
+        {
+          "stt": "33",
+          "full_name": "Nguyễn Đức Tú",
+          "email": "tund2@rikkeisoft.com",
+          "raw_ingame": "villain arc#2104",
+          "game_name": "villain arc",
+          "tag_line": "2104",
+          "status": "ok"
+        },
+        {
+          "stt": "34",
+          "full_name": "Mai Quang Duy",
+          "email": "duymq@rikkeisoft.com",
+          "raw_ingame": "Chưa Tày Đâu#6677",
+          "game_name": "Chưa Tày Đâu",
+          "tag_line": "6677",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "id": "t7",
+      "name": "Final Five",
+      "region": "Hà Nội",
+      "members": [
+        {
+          "stt": "35",
+          "full_name": "Vũ Tiến Thành",
+          "email": "thanhvt2@rikkeisoft.com",
+          "raw_ingame": "demon233#demon",
+          "game_name": "demon233",
+          "tag_line": "demon",
+          "status": "ok"
+        },
+        {
+          "stt": "36",
+          "full_name": "Trần Đình Tín",
+          "email": "tintd@rikkeisoft.com",
+          "raw_ingame": "ThànhBạiTạiRiver#T1Con",
+          "game_name": "ThànhBạiTạiRiver",
+          "tag_line": "T1Con",
+          "status": "ok"
+        },
+        {
+          "stt": "37",
+          "full_name": "Phạm Doãn Mạnh",
+          "email": "manhpd2@rikkeisoft.com",
+          "raw_ingame": "0PhaiManhdauu#VN2",
+          "game_name": "0PhaiManhdauu",
+          "tag_line": "VN2",
+          "status": "ok"
+        },
+        {
+          "stt": "38",
+          "full_name": "Đoàn Tiến Đạt",
+          "email": "datdt5@rikkeisoft.com",
+          "raw_ingame": "Lucky 13#2107",
+          "game_name": "Lucky 13",
+          "tag_line": "2107",
+          "status": "ok"
+        },
+        {
+          "stt": "39",
+          "full_name": "Nguyễn Tiến Đạt",
+          "email": "datnt8@rikkeisoft.com",
+          "raw_ingame": "23th Øƒ October#vn2",
+          "game_name": "23th Øƒ October",
+          "tag_line": "vn2",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "id": "t8",
+      "name": "D2 Plus",
+      "region": "Hà Nội",
+      "members": [
+        {
+          "stt": "40",
+          "full_name": "Nguyễn Minh Hải",
+          "email": "hainm2@rikkeisoft.com",
+          "raw_ingame": "WhiteKnight#98989",
+          "game_name": "WhiteKnight",
+          "tag_line": "98989",
+          "status": "ok"
+        },
+        {
+          "stt": "41",
+          "full_name": "Cao Văn Nhật",
+          "email": "nhatcv@rikkeisoft.com",
+          "raw_ingame": "領域展開 #2803",
+          "game_name": "領域展開",
+          "tag_line": "2803",
+          "status": "ok"
+        },
+        {
+          "stt": "42",
+          "full_name": "Đào Thành Sơn",
+          "email": "sondt4@rikkeisoft.com",
+          "raw_ingame": "SonDT#99999",
+          "game_name": "SonDT",
+          "tag_line": "99999",
+          "status": "ok"
+        },
+        {
+          "stt": "43",
+          "full_name": "Hoàng Văn Tùng",
+          "email": "tunghv@rikkeisoft.com",
+          "raw_ingame": "tùng hoàng văn#vn2",
+          "game_name": "tùng hoàng văn",
+          "tag_line": "vn2",
+          "status": "ok"
+        },
+        {
+          "stt": "44",
+          "full_name": "Nguyễn Đức Hùng",
+          "email": "hungnd5@rikkeisoft.com",
+          "raw_ingame": "tdzvl#2201",
+          "game_name": "tdzvl",
+          "tag_line": "2201",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "id": "t9",
+      "name": "5 anh tày",
+      "region": "Đà Nẵng",
+      "members": [
+        {
+          "stt": "45",
+          "full_name": "Lê Việt Long",
+          "email": "longlv3@rikkeisoft.com",
+          "raw_ingame": "Pizza Hành #NOTME",
+          "game_name": "Pizza Hành",
+          "tag_line": "NOTME",
+          "status": "ok"
+        },
+        {
+          "stt": "46",
+          "full_name": "Hồ Xuân Hiếu",
+          "email": "hieuhx@rikkeisoft.com",
+          "raw_ingame": "cyberdark2002 #7494",
+          "game_name": "cyberdark2002",
+          "tag_line": "7494",
+          "status": "ok"
+        },
+        {
+          "stt": "47",
+          "full_name": "Lê Phạm Xuân Trường",
+          "email": "truonglpx@rikkeisoft.com",
+          "raw_ingame": "Hugo#0308",
+          "game_name": "Hugo",
+          "tag_line": "0308",
+          "status": "ok"
+        },
+        {
+          "stt": "48",
+          "full_name": "Huỳnh Đức Quang Huy",
+          "email": "huyhdq@rikkeisoft.com",
+          "raw_ingame": "Serenity#42069",
+          "game_name": "Serenity",
+          "tag_line": "42069",
+          "status": "ok"
+        },
+        {
+          "stt": "49",
+          "full_name": "Hồ Huỳnh Nam",
+          "email": "namhh@rikkeisoft.com",
+          "raw_ingame": "MrBear#9511",
+          "game_name": "MrBear",
+          "tag_line": "9511",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "id": "t10",
+      "name": "8127",
+      "region": "Đà Nẵng",
+      "members": [
+        {
+          "stt": "50",
+          "full_name": "Nguyễn Tấn Lộc",
+          "email": "locnt2@rikkeisoft.com",
+          "raw_ingame": "DUT miKiV#Loc04",
+          "game_name": "DUT miKiV",
+          "tag_line": "Loc04",
+          "status": "ok"
+        },
+        {
+          "stt": "51",
+          "full_name": "Đinh Ngọc Trang",
+          "email": "trangdn@rikkeisoft.com",
+          "raw_ingame": "Vitalik Buterin#vn2",
+          "game_name": "Vitalik Buterin",
+          "tag_line": "vn2",
+          "status": "ok"
+        },
+        {
+          "stt": "52",
+          "full_name": "Mai Đăng Huân",
+          "email": "huanmd@rikkeisoft.com",
+          "raw_ingame": "NPG LongBui#vn2",
+          "game_name": "NPG LongBui",
+          "tag_line": "vn2",
+          "status": "ok"
+        },
+        {
+          "stt": "53",
+          "full_name": "Huỳnh Nguyễn Thanh Lợi",
+          "email": "loihnt@rikkeisoft.com",
+          "raw_ingame": "H 04 12 2003#21TDT",
+          "game_name": "H 04 12 2003",
+          "tag_line": "21TDT",
+          "status": "ok"
+        },
+        {
+          "stt": "54",
+          "full_name": "Phạm Thanh Hội",
+          "email": "hoipt@rikkeisoft.com",
+          "raw_ingame": "",
+          "game_name": "",
+          "tag_line": "",
+          "status": "needs_riot_id"
+        },
+        {
+          "stt": "55",
+          "full_name": "Bùi Xuân Long",
+          "email": "longbx@rikkeisoft.com",
+          "raw_ingame": "",
+          "game_name": "",
+          "tag_line": "",
+          "status": "needs_riot_id"
+        },
+        {
+          "stt": "56",
+          "full_name": "Nguyễn Phước Lộc",
+          "email": "locnp@rikkeisoft.com",
+          "raw_ingame": "Ng Thị Thùy Sang #ThS",
+          "game_name": "Ng Thị Thùy Sang",
+          "tag_line": "ThS",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "id": "t11",
+      "name": "Anh em xã đoàn",
+      "region": "Hồ Chí Minh",
+      "members": [
+        {
+          "stt": "57",
+          "full_name": "Trần Đăng Lợi",
+          "email": "loitd@rikkeisoft.com",
+          "raw_ingame": "Raumayusi #17595",
+          "game_name": "Raumayusi",
+          "tag_line": "17595",
+          "status": "ok"
+        },
+        {
+          "stt": "58",
+          "full_name": "Nguyễn Vinh Huy",
+          "email": "huynv9@rikkeisoft.com",
+          "raw_ingame": "Red Marlboro #TOPNA",
+          "game_name": "Red Marlboro",
+          "tag_line": "TOPNA",
+          "status": "ok"
+        },
+        {
+          "stt": "59",
+          "full_name": "Hoàng Anh Phương",
+          "email": "phuongha@rikkeisoft.com",
+          "raw_ingame": "Eul #0310",
+          "game_name": "Eul",
+          "tag_line": "0310",
+          "status": "ok"
+        },
+        {
+          "stt": "60",
+          "full_name": "Hoàng Dương Nam",
+          "email": "hoangduongnampb.2k6@gmail.com",
+          "raw_ingame": "N 14 01 06#14106",
+          "game_name": "N 14 01 06",
+          "tag_line": "14106",
+          "status": "ok"
+        },
+        {
+          "stt": "61",
+          "full_name": "Lê Hà Thanh Sang",
+          "email": "sanglht@rikkeiacademy.com",
+          "raw_ingame": "S 24 01 20#5463",
+          "game_name": "S 24 01 20",
+          "tag_line": "5463",
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "id": "t12",
+      "name": "Tuấn 4 Tuất",
+      "region": "RE",
+      "members": [
+        {
+          "stt": "62",
+          "full_name": "Lương Quốc Tuấn",
+          "email": "tuanlq@rikkeiacademy.com",
+          "raw_ingame": "TunzzzThunder #112003",
+          "game_name": "TunzzzThunder",
+          "tag_line": "112003",
+          "status": "ok"
+        },
+        {
+          "stt": "63",
+          "full_name": "Nguyễn Quảng An",
+          "email": "annq@rikkeiacademy.com",
+          "raw_ingame": "Be better #8888",
+          "game_name": "Be better",
+          "tag_line": "8888",
+          "status": "ok"
+        },
+        {
+          "stt": "64",
+          "full_name": "Phạm Ngọc Kiên",
+          "email": "kienpn@rikkeiedu.io.vn",
+          "raw_ingame": "I am PNK #vn2",
+          "game_name": "I am PNK",
+          "tag_line": "vn2",
+          "status": "ok"
+        },
+        {
+          "stt": "65",
+          "full_name": "Lại Trung Lâm",
+          "email": "lamlt@rikkeiedu.org",
+          "raw_ingame": "LamiPhuong #1310",
+          "game_name": "LamiPhuong",
+          "tag_line": "1310",
+          "status": "ok"
+        },
+        {
+          "stt": "66",
+          "full_name": "Đinh Thành Nam",
+          "email": "namdt@rikkeieducation.com",
+          "raw_ingame": "Đinh Thành Nam #DTN",
+          "game_name": "Đinh Thành Nam",
+          "tag_line": "DTN",
+          "status": "ok"
+        },
+        {
+          "stt": "67",
+          "full_name": "Lâm Tùng Dương",
+          "email": "duonglt@rikkeieducation.com",
+          "raw_ingame": "GnoudMal #6838",
+          "game_name": "GnoudMal",
+          "tag_line": "6838",
+          "status": "ok"
+        }
+      ]
+    }
+  ]
+}

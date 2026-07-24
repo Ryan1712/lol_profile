@@ -1,0 +1,539 @@
+{
+  "team_id": "t6",
+  "team_name": "G0AT",
+  "refreshed_at": "2026-07-24T08:51:58.963669+00:00",
+  "members": {
+    "29": {
+      "riot_id": "seasouth#0711",
+      "puuid": "wTOSPdTmzHuMNHfcf-6MGnedi7hO16xz-CqeUYg7_Tha25myxyrnlubwfoCs5e19Pzr4OPxNi0v2aw",
+      "solo": {
+        "tier": "DIAMOND",
+        "rank": "I",
+        "lp": 57,
+        "wins": 26,
+        "losses": 30
+      },
+      "flex": {
+        "tier": "DIAMOND",
+        "rank": "IV",
+        "lp": 0,
+        "wins": 10,
+        "losses": 13
+      },
+      "lanes": [
+        [
+          "Support",
+          0.9
+        ],
+        [
+          "Jungle",
+          0.06666666666666667
+        ],
+        [
+          "ADC",
+          0.03333333333333333
+        ]
+      ],
+      "top_champions": [
+        {
+          "champion": "Mel",
+          "games": 10,
+          "wins": 4,
+          "winrate": 0.4,
+          "kda": 1.7741935483870968,
+          "k": 9.6,
+          "d": 9.3,
+          "a": 6.9
+        },
+        {
+          "champion": "Pyke",
+          "games": 6,
+          "wins": 4,
+          "winrate": 0.6666666666666666,
+          "kda": 2.185185185185185,
+          "k": 6.5,
+          "d": 9.0,
+          "a": 13.166666666666666
+        },
+        {
+          "champion": "Camille",
+          "games": 2,
+          "wins": 0,
+          "winrate": 0.0,
+          "kda": 1.3448275862068966,
+          "k": 7.5,
+          "d": 14.5,
+          "a": 12.0
+        },
+        {
+          "champion": "JarvanIV",
+          "games": 2,
+          "wins": 0,
+          "winrate": 0.0,
+          "kda": 1.9615384615384615,
+          "k": 7.5,
+          "d": 13.0,
+          "a": 18.0
+        },
+        {
+          "champion": "Nami",
+          "games": 1,
+          "wins": 1,
+          "winrate": 1.0,
+          "kda": 3.4285714285714284,
+          "k": 2.0,
+          "d": 7.0,
+          "a": 22.0
+        }
+      ],
+      "matches_analyzed": 30,
+      "error": null
+    },
+    "30": {
+      "riot_id": "PRX Yuu#1014",
+      "puuid": "6CjQlaCsDN3Aeuzsa92A_YJLar_i8WtFeQcVAu_R05NKyowzwXNyRvXpTc5DPmISAAgm3MC8Ow8jFg",
+      "solo": null,
+      "flex": {
+        "tier": "SILVER",
+        "rank": "IV",
+        "lp": 0,
+        "wins": 3,
+        "losses": 9
+      },
+      "lanes": [
+        [
+          "ADC",
+          0.5862068965517241
+        ],
+        [
+          "Mid",
+          0.20689655172413793
+        ],
+        [
+          "Top",
+          0.13793103448275862
+        ],
+        [
+          "Support",
+          0.034482758620689655
+        ],
+        [
+          "Jungle",
+          0.034482758620689655
+        ]
+      ],
+      "top_champions": [
+        {
+          "champion": "Kaisa",
+          "games": 5,
+          "wins": 0,
+          "winrate": 0.0,
+          "kda": 1.5,
+          "k": 9.8,
+          "d": 9.2,
+          "a": 4.0
+        },
+        {
+          "champion": "Jhin",
+          "games": 4,
+          "wins": 2,
+          "winrate": 0.5,
+          "kda": 3.4545454545454546,
+          "k": 16.5,
+          "d": 8.25,
+          "a": 12.0
+        },
+        {
+          "champion": "Ezreal",
+          "games": 3,
+          "wins": 2,
+          "winrate": 0.6666666666666666,
+          "kda": 9.2,
+          "k": 8.666666666666666,
+          "d": 1.6666666666666667,
+          "a": 6.666666666666667
+        },
+        {
+          "champion": "Viktor",
+          "games": 2,
+          "wins": 1,
+          "winrate": 0.5,
+          "kda": 1.5555555555555556,
+          "k": 8.0,
+          "d": 9.0,
+          "a": 6.0
+        },
+        {
+          "champion": "Yone",
+          "games": 2,
+          "wins": 0,
+          "winrate": 0.0,
+          "kda": 1.25,
+          "k": 4.5,
+          "d": 8.0,
+          "a": 5.5
+        }
+      ],
+      "matches_analyzed": 29,
+      "error": null
+    },
+    "31": {
+      "riot_id": "Nhacsimongmo#mp2",
+      "puuid": "UOLWG0cUeR9gK8prTMwn2buj0beKXZX8sZ_pJUh4EURqPrq5NaRCyTQmwpQIkVIY8aCqV2rN6952fw",
+      "solo": {
+        "tier": "MASTER",
+        "rank": "I",
+        "lp": 9,
+        "wins": 40,
+        "losses": 30
+      },
+      "flex": {
+        "tier": "EMERALD",
+        "rank": "II",
+        "lp": 16,
+        "wins": 165,
+        "losses": 161
+      },
+      "lanes": [
+        [
+          "Top",
+          0.41379310344827586
+        ],
+        [
+          "Jungle",
+          0.1724137931034483
+        ],
+        [
+          "ADC",
+          0.1724137931034483
+        ],
+        [
+          "Mid",
+          0.1724137931034483
+        ],
+        [
+          "Support",
+          0.06896551724137931
+        ]
+      ],
+      "top_champions": [
+        {
+          "champion": "Renekton",
+          "games": 8,
+          "wins": 5,
+          "winrate": 0.625,
+          "kda": 2.9555555555555557,
+          "k": 8.625,
+          "d": 5.625,
+          "a": 8.0
+        },
+        {
+          "champion": "Qiyana",
+          "games": 7,
+          "wins": 4,
+          "winrate": 0.5714285714285714,
+          "kda": 4.03030303030303,
+          "k": 10.428571428571429,
+          "d": 4.714285714285714,
+          "a": 8.571428571428571
+        },
+        {
+          "champion": "Kaisa",
+          "games": 3,
+          "wins": 1,
+          "winrate": 0.3333333333333333,
+          "kda": 3.3529411764705883,
+          "k": 8.666666666666666,
+          "d": 5.666666666666667,
+          "a": 10.333333333333334
+        },
+        {
+          "champion": "Camille",
+          "games": 2,
+          "wins": 2,
+          "winrate": 1.0,
+          "kda": 2.4,
+          "k": 8.0,
+          "d": 10.0,
+          "a": 16.0
+        },
+        {
+          "champion": "Irelia",
+          "games": 2,
+          "wins": 0,
+          "winrate": 0.0,
+          "kda": 1.25,
+          "k": 4.5,
+          "d": 8.0,
+          "a": 5.5
+        }
+      ],
+      "matches_analyzed": 29,
+      "error": null
+    },
+    "32": {
+      "riot_id": "aaaaaaaaaaaaaaaa#VN171",
+      "puuid": "DPNss-vkYfDn60JrYkQ1iHD9o5fQKHkGeO-yY4OwVBvE0XeD5a2nXXloWhgfNgTfEZZ33WomEyAptA",
+      "solo": null,
+      "flex": {
+        "tier": "EMERALD",
+        "rank": "IV",
+        "lp": 0,
+        "wins": 9,
+        "losses": 16
+      },
+      "lanes": [
+        [
+          "Mid",
+          0.6551724137931034
+        ],
+        [
+          "Support",
+          0.1724137931034483
+        ],
+        [
+          "ADC",
+          0.13793103448275862
+        ],
+        [
+          "Jungle",
+          0.034482758620689655
+        ]
+      ],
+      "top_champions": [
+        {
+          "champion": "Ahri",
+          "games": 6,
+          "wins": 4,
+          "winrate": 0.6666666666666666,
+          "kda": 4.851851851851852,
+          "k": 9.5,
+          "d": 4.5,
+          "a": 12.333333333333334
+        },
+        {
+          "champion": "TwistedFate",
+          "games": 3,
+          "wins": 2,
+          "winrate": 0.6666666666666666,
+          "kda": 2.5384615384615383,
+          "k": 7.333333333333333,
+          "d": 8.666666666666666,
+          "a": 14.666666666666666
+        },
+        {
+          "champion": "Blitzcrank",
+          "games": 3,
+          "wins": 2,
+          "winrate": 0.6666666666666666,
+          "kda": 3.5,
+          "k": 3.3333333333333335,
+          "d": 7.333333333333333,
+          "a": 22.333333333333332
+        },
+        {
+          "champion": "Sylas",
+          "games": 2,
+          "wins": 0,
+          "winrate": 0.0,
+          "kda": 1.7826086956521738,
+          "k": 11.0,
+          "d": 11.5,
+          "a": 9.5
+        },
+        {
+          "champion": "Xerath",
+          "games": 2,
+          "wins": 0,
+          "winrate": 0.0,
+          "kda": 1.8125,
+          "k": 8.0,
+          "d": 8.0,
+          "a": 6.5
+        }
+      ],
+      "matches_analyzed": 29,
+      "error": null
+    },
+    "33": {
+      "riot_id": "villain arc#2104",
+      "puuid": "hV_Bo9FIODHiuIDeVBvfuk8ly0TF2meF8r-cm_pC8JETwz3GMKMGSs6rtp_ptV5dhI8kRSEohc6t7Q",
+      "solo": {
+        "tier": "PLATINUM",
+        "rank": "IV",
+        "lp": 57,
+        "wins": 82,
+        "losses": 87
+      },
+      "flex": {
+        "tier": "PLATINUM",
+        "rank": "IV",
+        "lp": 8,
+        "wins": 19,
+        "losses": 27
+      },
+      "lanes": [
+        [
+          "ADC",
+          0.4482758620689655
+        ],
+        [
+          "Jungle",
+          0.3448275862068966
+        ],
+        [
+          "Support",
+          0.1724137931034483
+        ],
+        [
+          "Top",
+          0.034482758620689655
+        ]
+      ],
+      "top_champions": [
+        {
+          "champion": "Naafiri",
+          "games": 3,
+          "wins": 2,
+          "winrate": 0.6666666666666666,
+          "kda": 2.107142857142857,
+          "k": 13.0,
+          "d": 9.333333333333334,
+          "a": 6.666666666666667
+        },
+        {
+          "champion": "Aphelios",
+          "games": 3,
+          "wins": 2,
+          "winrate": 0.6666666666666666,
+          "kda": 1.2820512820512822,
+          "k": 10.0,
+          "d": 13.0,
+          "a": 6.666666666666667
+        },
+        {
+          "champion": "Ashe",
+          "games": 2,
+          "wins": 2,
+          "winrate": 1.0,
+          "kda": 2.8,
+          "k": 8.5,
+          "d": 7.5,
+          "a": 12.5
+        },
+        {
+          "champion": "JarvanIV",
+          "games": 2,
+          "wins": 1,
+          "winrate": 0.5,
+          "kda": 3.230769230769231,
+          "k": 6.5,
+          "d": 6.5,
+          "a": 14.5
+        },
+        {
+          "champion": "MissFortune",
+          "games": 2,
+          "wins": 0,
+          "winrate": 0.0,
+          "kda": 1.7142857142857142,
+          "k": 10.0,
+          "d": 10.5,
+          "a": 8.0
+        }
+      ],
+      "matches_analyzed": 29,
+      "error": null
+    },
+    "34": {
+      "riot_id": "Chưa Tày Đâu#6677",
+      "puuid": "2XpbmZLlp3REGJKoiQJm5IUoyXlcceHB03SJ6mfLV70MbS_qxxcY1rcpdUAc9MfUWhFVJGjjQTvNHQ",
+      "solo": {
+        "tier": "GOLD",
+        "rank": "II",
+        "lp": 62,
+        "wins": 103,
+        "losses": 116
+      },
+      "flex": {
+        "tier": "SILVER",
+        "rank": "III",
+        "lp": 46,
+        "wins": 13,
+        "losses": 18
+      },
+      "lanes": [
+        [
+          "Support",
+          0.4666666666666667
+        ],
+        [
+          "Jungle",
+          0.43333333333333335
+        ],
+        [
+          "Mid",
+          0.06666666666666667
+        ],
+        [
+          "ADC",
+          0.03333333333333333
+        ]
+      ],
+      "top_champions": [
+        {
+          "champion": "Seraphine",
+          "games": 11,
+          "wins": 4,
+          "winrate": 0.36363636363636365,
+          "kda": 2.5945945945945947,
+          "k": 3.0,
+          "d": 6.7272727272727275,
+          "a": 14.454545454545455
+        },
+        {
+          "champion": "Nocturne",
+          "games": 3,
+          "wins": 2,
+          "winrate": 0.6666666666666666,
+          "kda": 6.166666666666667,
+          "k": 5.333333333333333,
+          "d": 2.0,
+          "a": 7.0
+        },
+        {
+          "champion": "Graves",
+          "games": 3,
+          "wins": 2,
+          "winrate": 0.6666666666666666,
+          "kda": 1.8518518518518519,
+          "k": 6.0,
+          "d": 9.0,
+          "a": 10.666666666666666
+        },
+        {
+          "champion": "Vi",
+          "games": 2,
+          "wins": 1,
+          "winrate": 0.5,
+          "kda": 1.375,
+          "k": 2.0,
+          "d": 8.0,
+          "a": 9.0
+        },
+        {
+          "champion": "Khazix",
+          "games": 2,
+          "wins": 0,
+          "winrate": 0.0,
+          "kda": 2.9523809523809526,
+          "k": 16.0,
+          "d": 10.5,
+          "a": 15.0
+        }
+      ],
+      "matches_analyzed": 30,
+      "error": null
+    }
+  }
+}

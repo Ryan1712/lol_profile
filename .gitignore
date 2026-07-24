@@ -1,22 +1,12 @@
 # Secrets — không bao giờ commit
 .env
 
-# Dữ liệu làm việc & cache (sinh ra khi chạy)
-data/
-*.log
-
-# Icon tướng tải về bằng scripts/download_icons.py
-assets/
-
 # Python
 __pycache__/
 *.pyc
 .venv/
 venv/
 .pytest_cache/
-
-# Excel gốc (dữ liệu người thật — giữ nội bộ)
-*.xlsx
 
 # Claude Code local settings
 .claude/
