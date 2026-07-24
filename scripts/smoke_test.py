@@ -1,5 +1,12 @@
 """Kiểm tra routing + API key trên mạng thông. Dùng: python scripts/smoke_test.py "Name#TAG" """
 import sys
+from pathlib import Path
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src import riot_client as rc
 from src import config
