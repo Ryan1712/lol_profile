@@ -143,23 +143,31 @@ function renderTeam(team, snapshot) {
   });
   document.getElementById("save-name").addEventListener("click", async () => {
     const name = document.getElementById("team-name").value;
-    const r = await api("/api/team/" + team.id + "/rename", {
-      method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name }) });
-    if (!r || !r.ok) showBanner("Đổi tên thất bại — thử lại.");
-    else showBanner("Đã đổi tên đội.");
+    try {
+      const r = await api("/api/team/" + team.id + "/rename", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name }) });
+      if (!r || !r.ok) showBanner("Đổi tên thất bại — thử lại.");
+      else showBanner("Đã đổi tên đội.");
+    } catch (err) {
+      showBanner("Lỗi khi đổi tên — thử lại.");
+    }
   });
   view.querySelectorAll("button[data-save]").forEach((btn) =>
     btn.addEventListener("click", async () => {
       const stt = btn.dataset.save;
       const input = view.querySelector(`input[data-stt="${stt}"]`);
-      const r = await api("/api/member/" + stt + "/riot-id", {
-        method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ raw_ingame: input.value }) });
-      if (!r || !r.team) { showBanner("Lưu Riot ID thất bại — thử lại."); return; }
-      if (snapshot && snapshot.members) delete snapshot.members[stt];
-      renderTeam(r.team, snapshot);
-      showBanner("Đã lưu Riot ID. Bấm Refresh để tra lại.");
+      try {
+        const r = await api("/api/member/" + stt + "/riot-id", {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ raw_ingame: input.value }) });
+        if (!r || !r.team) { showBanner("Lưu Riot ID thất bại — thử lại."); return; }
+        if (snapshot && snapshot.members) delete snapshot.members[stt];
+        renderTeam(r.team, snapshot);
+        showBanner("Đã lưu Riot ID. Bấm Refresh để tra lại.");
+      } catch (err) {
+        showBanner("Lỗi khi lưu — thử lại.");
+      }
     }));
 }
 

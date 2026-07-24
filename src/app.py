@@ -22,6 +22,25 @@ def _team_by_id(data, team_id):
     return None
 
 
+def _is_total_network_failure(team, snapshot):
+    """True when EVERY member with a valid Riot ID errored with 'network'.
+
+    A per-member 'needs_riot_id' is not a network problem, so it's excluded
+    from the check — a team where some members are unscanned but the
+    reachable ones succeeded is not a network failure.
+    """
+    checked = [
+        m for m in team["members"]
+        if snapshot["members"].get(m["stt"], {}).get("error") != "needs_riot_id"
+    ]
+    if not checked:
+        return False
+    return all(
+        snapshot["members"].get(m["stt"], {}).get("error") == "network"
+        for m in checked
+    )
+
+
 def build_app(client_factory=lambda: rc.RiotClient()):
     app = FastAPI(title="LOL Scouting Tool")
 
@@ -65,17 +84,24 @@ def build_app(client_factory=lambda: rc.RiotClient()):
             return {"error": "auth", "snapshot": cache.load_snapshot(team_id)}
         except rc.NetworkError:
             return {"error": "network", "snapshot": cache.load_snapshot(team_id)}
+        except rc.RiotError:
+            return {"error": "network", "snapshot": cache.load_snapshot(team_id)}
         finally:
             close = getattr(client, "close", None)
             if callable(close):
                 close()
+        if _is_total_network_failure(team, snapshot):
+            return {"error": "network", "snapshot": cache.load_snapshot(team_id)}
         cache.save_snapshot(team_id, snapshot)
         return {"snapshot": snapshot}
 
     @app.post("/api/member/{stt}/riot-id")
     def edit_riot_id(stt: str, body: RiotIdBody):
         data = roster.ensure_roster()
-        data = roster.update_member_riot_id(data, stt, body.raw_ingame)
+        try:
+            data = roster.update_member_riot_id(data, stt, body.raw_ingame)
+        except KeyError:
+            return JSONResponse({"error": "not_found"}, status_code=404)
         roster.save_roster(data)
         team = next((t for t in data["teams"] for m in t["members"] if m["stt"] == stt), None)
         return {"ok": True, "team": team}
@@ -83,7 +109,10 @@ def build_app(client_factory=lambda: rc.RiotClient()):
     @app.post("/api/team/{team_id}/rename")
     def rename(team_id: str, body: RenameBody):
         data = roster.ensure_roster()
-        data = roster.rename_team(data, team_id, body.name)
+        try:
+            data = roster.rename_team(data, team_id, body.name)
+        except KeyError:
+            return JSONResponse({"error": "not_found"}, status_code=404)
         roster.save_roster(data)
         return {"ok": True}
 

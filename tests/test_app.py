@@ -2,6 +2,7 @@ from fastapi.testclient import TestClient
 
 from src import app as appmod
 from src import cache, roster
+from src import riot_client as rc
 
 
 class FakeClient:
@@ -20,6 +21,16 @@ class FakeClient:
                          "participants": [{"puuid": "P1", "championName": "Ahri",
                                            "kills": 5, "deaths": 1, "assists": 5, "win": True,
                                            "teamPosition": "MIDDLE"}]}}
+
+
+class AuthErrorClient:
+    def get_account_by_riot_id(self, name, tag):
+        raise rc.AuthError("401: key sai hoặc hết hạn")
+
+
+class NetworkErrorClient:
+    def get_account_by_riot_id(self, name, tag):
+        raise rc.NetworkError("connection reset")
 
 
 def _seed_roster(tmp_path, monkeypatch):
@@ -71,3 +82,54 @@ def test_rename_team(tmp_path, monkeypatch):
     r = c.post("/api/team/t1/rename", json={"name": "Beta"})
     assert r.status_code == 200
     assert c.get("/api/team/t1").json()["team"]["name"] == "Beta"
+
+
+def _seed_old_snapshot():
+    cache.save_snapshot("t1", {
+        "team_id": "t1", "team_name": "Alpha", "refreshed_at": "OLD",
+        "members": {"1": {"solo": {"tier": "OLD_TIER"}}},
+    })
+
+
+def test_refresh_auth_error_preserves_snapshot(tmp_path, monkeypatch):
+    _seed_roster(tmp_path, monkeypatch)
+    _seed_old_snapshot()
+    application = appmod.build_app(client_factory=lambda: AuthErrorClient())
+    c = TestClient(application)
+    r = c.post("/api/team/t1/refresh")
+    assert r.status_code == 200
+    body = r.json()
+    assert body["error"] == "auth"
+    assert body["snapshot"]["members"]["1"]["solo"]["tier"] == "OLD_TIER"
+    on_disk = cache.load_snapshot("t1")
+    assert on_disk["refreshed_at"] == "OLD"
+    assert on_disk["members"]["1"]["solo"]["tier"] == "OLD_TIER"
+
+
+def test_refresh_network_outage_preserves_snapshot(tmp_path, monkeypatch):
+    _seed_roster(tmp_path, monkeypatch)
+    _seed_old_snapshot()
+    application = appmod.build_app(client_factory=lambda: NetworkErrorClient())
+    c = TestClient(application)
+    r = c.post("/api/team/t1/refresh")
+    assert r.status_code == 200
+    body = r.json()
+    assert body["error"] == "network"
+    assert body["snapshot"]["members"]["1"]["solo"]["tier"] == "OLD_TIER"
+    on_disk = cache.load_snapshot("t1")
+    assert on_disk["refreshed_at"] == "OLD"
+    assert on_disk["members"]["1"]["solo"]["tier"] == "OLD_TIER"
+
+
+def test_edit_riot_id_unknown_stt_returns_404(tmp_path, monkeypatch):
+    c = _client(tmp_path, monkeypatch)
+    r = c.post("/api/member/999/riot-id", json={"raw_ingame": "X#TAG"})
+    assert r.status_code == 404
+    assert r.json() == {"error": "not_found"}
+
+
+def test_rename_unknown_team_returns_404(tmp_path, monkeypatch):
+    c = _client(tmp_path, monkeypatch)
+    r = c.post("/api/team/nope/rename", json={"name": "X"})
+    assert r.status_code == 404
+    assert r.json() == {"error": "not_found"}

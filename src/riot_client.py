@@ -56,8 +56,10 @@ class _RateLimiter:
 
 
 class RiotClient:
-    def __init__(self, api_key=config.RIOT_API_KEY, transport=None, sleep_fn=time.sleep,
+    def __init__(self, api_key=None, transport=None, sleep_fn=time.sleep,
                  max_retries=3):
+        if api_key is None:
+            api_key = config.RIOT_API_KEY
         self.api_key = api_key
         self.sleep_fn = sleep_fn
         self.max_retries = max_retries
