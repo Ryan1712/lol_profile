@@ -1,0 +1,44 @@
+:root { --bg:#0f1116; --card:#191c24; --line:#2a2f3a; --fg:#e6e8ee; --muted:#9aa3b2;
+  --win:#3fb950; --loss:#f85149; --accent:#4c8dff; }
+* { box-sizing: border-box; }
+body { margin:0; font:15px/1.45 system-ui,Segoe UI,Roboto,sans-serif;
+  background:var(--bg); color:var(--fg); }
+header { display:flex; gap:12px; align-items:center; padding:14px 20px;
+  border-bottom:1px solid var(--line); position:sticky; top:0; background:var(--bg); z-index:5; }
+h1 { font-size:18px; margin:0; }
+#search { margin-left:auto; padding:8px 12px; border-radius:8px; border:1px solid var(--line);
+  background:var(--card); color:var(--fg); min-width:220px; }
+button { cursor:pointer; border:1px solid var(--line); background:var(--card); color:var(--fg);
+  padding:8px 14px; border-radius:8px; }
+button.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+.banner { margin:12px 20px; padding:12px 14px; border-radius:8px; background:#3a1d1d;
+  border:1px solid var(--loss); color:#ffd7d7; }
+main { padding:20px; }
+.region-title { color:var(--muted); text-transform:uppercase; font-size:12px;
+  letter-spacing:.08em; margin:22px 0 8px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; }
+.team-card { background:var(--card); border:1px solid var(--line); border-radius:12px;
+  padding:14px; cursor:pointer; }
+.team-card:hover { border-color:var(--accent); }
+.team-card h3 { margin:0 0 6px; font-size:16px; }
+.team-card .meta { color:var(--muted); font-size:13px; }
+table { width:100%; border-collapse:collapse; }
+th,td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line);
+  vertical-align:top; }
+th { color:var(--muted); font-weight:600; font-size:13px; }
+.rank-badge { font-weight:600; }
+.tier-IRON{color:#7c7c7c}.tier-BRONZE{color:#b06a3b}.tier-SILVER{color:#9fb0c3}
+.tier-GOLD{color:#e2b13c}.tier-PLATINUM{color:#4bbfa5}.tier-EMERALD{color:#37a86b}
+.tier-DIAMOND{color:#5aa0ff}.tier-MASTER{color:#b054e0}.tier-GRANDMASTER{color:#e0555b}
+.tier-CHALLENGER{color:#63d0ff}
+.wr-win{color:var(--win)} .wr-loss{color:var(--loss)}
+.champs { display:flex; gap:10px; flex-wrap:wrap; }
+.champ { display:flex; gap:6px; align-items:center; }
+.champ img { width:34px; height:34px; border-radius:6px; background:#000; }
+.champ .c-meta { font-size:12px; color:var(--muted); }
+.tag-warn { color:#ffcf6b; font-size:13px; }
+.edit-inline { display:flex; gap:6px; }
+.edit-inline input { padding:6px 8px; border-radius:6px; border:1px solid var(--line);
+  background:var(--bg); color:var(--fg); }
+.lmss { font-size:12px; color:var(--accent); text-decoration:none; }
+.muted { color:var(--muted); }
