@@ -5,6 +5,9 @@
 data/
 *.log
 
+# Icon tướng tải về bằng scripts/download_icons.py
+assets/
+
 # Python
 __pycache__/
 *.pyc
