@@ -14,3 +14,6 @@ venv/
 
 # Excel gốc (dữ liệu người thật — giữ nội bộ)
 *.xlsx
+
+# Claude Code local settings
+.claude/
