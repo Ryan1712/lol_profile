@@ -57,7 +57,7 @@ function rankCell(rank) {
   const total = (rank.wins || 0) + (rank.losses || 0);
   const wr = total ? rank.wins / total : 0;
   const wrClass = wr >= 0.5 ? "wr-win" : "wr-loss";
-  return `<span class="rank-badge tier-${rank.tier}">${rank.tier} ${rank.rank}</span>
+  return `<span class="rank-badge tier-${esc(rank.tier)}">${esc(rank.tier)} ${esc(rank.rank)}</span>
     · ${rank.lp} LP<br><span class="${wrClass}">${rank.wins}T/${rank.losses}B (${pct(wr)})</span>`;
 }
 
@@ -73,7 +73,7 @@ function champCell(champs) {
 
 function laneCell(lanes) {
   if (!lanes || !lanes.length) return '<span class="muted">—</span>';
-  return lanes.slice(0, 2).map((l) => `${l[0]} ${pct(l[1])}`).join(" · ");
+  return lanes.slice(0, 2).map((l) => `${esc(l[0])} ${pct(l[1])}`).join(" · ");
 }
 
 function memberRow(m, res) {
@@ -89,21 +89,23 @@ function memberRow(m, res) {
   if (!res || res.error === "needs_riot_id") {
     return `<tr>
       <td><b>${esc(m.full_name)}</b><br>${idCell}<br>${edit}
-        <a class="lmss" href="${lmss}" target="_blank">Mở LMSS+</a></td>
+        <a class="lmss" href="${lmss}" target="_blank" rel="noopener noreferrer">Mở LMSS+</a></td>
       <td colspan="4" class="muted">${res && res.error === "needs_riot_id"
         ? "Chưa tra được — thiếu Riot ID" : "Chưa quét"}</td></tr>`;
   }
   if (res.error === "not_found") {
-    return `<tr><td><b>${esc(m.full_name)}</b><br>${idCell}<br>${edit}</td>
+    return `<tr><td><b>${esc(m.full_name)}</b><br>${idCell}<br>${edit}
+        <a class="lmss" href="${lmss}" target="_blank" rel="noopener noreferrer">Mở LMSS+</a></td>
       <td colspan="4" class="tag-warn">Không tìm thấy Riot ID này — sửa lại?</td></tr>`;
   }
   if (res.error === "network") {
-    return `<tr><td><b>${esc(m.full_name)}</b><br>${idCell}</td>
+    return `<tr><td><b>${esc(m.full_name)}</b><br>${idCell}
+        <a class="lmss" href="${lmss}" target="_blank" rel="noopener noreferrer">Mở LMSS+</a></td>
       <td colspan="4" class="wr-loss">Lỗi mạng khi tra</td></tr>`;
   }
   return `<tr>
     <td><b>${esc(m.full_name)}</b><br>${idCell}<br>${edit}
-      <a class="lmss" href="${lmss}" target="_blank">Mở LMSS+</a></td>
+      <a class="lmss" href="${lmss}" target="_blank" rel="noopener noreferrer">Mở LMSS+</a></td>
     <td>${rankCell(res.solo)}</td>
     <td>${rankCell(res.flex)}</td>
     <td>${laneCell(res.lanes)}</td>
@@ -128,17 +130,24 @@ function renderTeam(team, snapshot) {
 
   document.getElementById("refresh").addEventListener("click", async (e) => {
     e.target.disabled = true; e.target.textContent = "Đang quét…"; showBanner("");
-    const out = await api("/api/team/" + team.id + "/refresh", { method: "POST" });
-    if (out.error === "auth") showBanner("Không kết nối được Riot API — key sai/hết hạn. Gia hạn key ở developer.riotgames.com rồi thử lại.");
-    else if (out.error === "network") showBanner("Không kết nối được Riot API — kiểm tra mạng/VPN. Đang xem dữ liệu cũ.");
-    renderTeam(team, out.snapshot);
+    try {
+      const out = await api("/api/team/" + team.id + "/refresh", { method: "POST" });
+      if (out.error === "auth") showBanner("Không kết nối được Riot API — key sai/hết hạn. Gia hạn key ở developer.riotgames.com rồi thử lại.");
+      else if (out.error === "network") showBanner("Không kết nối được Riot API — kiểm tra mạng/VPN. Đang xem dữ liệu cũ.");
+      renderTeam(team, out.snapshot);
+    } catch (err) {
+      showBanner("Lỗi khi gọi máy chủ cục bộ — thử lại.");
+    } finally {
+      e.target.disabled = false; e.target.textContent = "⟳ Refresh";
+    }
   });
   document.getElementById("save-name").addEventListener("click", async () => {
     const name = document.getElementById("team-name").value;
-    await api("/api/team/" + team.id + "/rename", {
+    const r = await api("/api/team/" + team.id + "/rename", {
       method: "POST", headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name }) });
-    showBanner("Đã đổi tên đội.");
+    if (!r || !r.ok) showBanner("Đổi tên thất bại — thử lại.");
+    else showBanner("Đã đổi tên đội.");
   });
   view.querySelectorAll("button[data-save]").forEach((btn) =>
     btn.addEventListener("click", async () => {
@@ -147,6 +156,8 @@ function renderTeam(team, snapshot) {
       const r = await api("/api/member/" + stt + "/riot-id", {
         method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ raw_ingame: input.value }) });
+      if (!r || !r.team) { showBanner("Lưu Riot ID thất bại — thử lại."); return; }
+      if (snapshot && snapshot.members) delete snapshot.members[stt];
       renderTeam(r.team, snapshot);
       showBanner("Đã lưu Riot ID. Bấm Refresh để tra lại.");
     }));
