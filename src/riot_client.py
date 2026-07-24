@@ -30,13 +30,14 @@ class NetworkError(RiotError):
 class _RateLimiter:
     """Giữ dưới 20 req/giây và 100 req/2 phút cho dev key."""
 
-    def __init__(self, sleep_fn):
+    def __init__(self, sleep_fn, time_fn=time.monotonic):
         self._sleep = sleep_fn
+        self._time_fn = time_fn
         self._sec = deque()
         self._long = deque()
 
     def _now(self):
-        return time.monotonic()
+        return self._time_fn()
 
     def acquire(self):
         while True:
@@ -93,7 +94,10 @@ class RiotClient:
             if code == 404:
                 raise NotFoundError(f"404: {url}")
             if code == 429:
-                retry_after = float(resp.headers.get("Retry-After", "1"))
+                try:
+                    retry_after = float(resp.headers.get("Retry-After", "1"))
+                except (TypeError, ValueError):
+                    retry_after = 1.0
                 if attempt > self.max_retries:
                     raise RateLimitError("429 quá nhiều lần")
                 self.sleep_fn(retry_after)

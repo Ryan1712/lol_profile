@@ -61,3 +61,26 @@ def test_network_error_wraps_connect_failure():
         raise httpx.ConnectError("reset")
     with pytest.raises(rc.NetworkError):
         _client(handler).get_account_by_riot_id("A", "VN2")
+
+
+def test_rate_limiter_blocks_when_per_second_cap_exceeded():
+    class FakeClock:
+        def __init__(self):
+            self.t = 0.0
+
+        def now(self):
+            return self.t
+
+    clock = FakeClock()
+    sleeps = []
+
+    def sleep_fn(s):
+        sleeps.append(s)
+        clock.t += s
+
+    limiter = rc._RateLimiter(sleep_fn=sleep_fn, time_fn=clock.now)
+    for _ in range(25):
+        limiter.acquire()
+
+    assert len(sleeps) >= 1
+    assert sleeps[0] > 0
