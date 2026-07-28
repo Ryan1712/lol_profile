@@ -35,6 +35,26 @@ python run.py
 ```
 Trình duyệt mở `http://127.0.0.1:8000/`. Chọn đội → **Refresh**.
 
+## Test từ điện thoại (không có máy tính)
+
+Chỉ cần iPhone + GitHub, chọn 1 trong 2 cách:
+
+### Cách A — Deploy lên Render.com (khuyên dùng, ít thao tác nhất trên điện thoại)
+
+1. Mở [render.com](https://render.com) bằng Safari, đăng nhập bằng tài khoản GitHub.
+2. **New +** → **Web Service** → chọn repo `lol_profile`.
+3. Render tự nhận diện `render.yaml` trong repo (build: `pip install -r requirements.txt`, start: `python run.py`). Nếu Render không tự đọc, tự nhập 2 lệnh đó vào ô Build/Start Command.
+4. Ở mục **Environment Variables**, thêm `RIOT_API_KEY` = key lấy từ https://developer.riotgames.com (key tạm hết hạn 24h, cần vào lấy key mới rồi cập nhật lại khi hết hạn). `REGION` đã có sẵn giá trị `vn2` trong `render.yaml`.
+5. Bấm **Deploy**. Đợi build xong, Render cho 1 URL dạng `https://lol-scouting-tool.onrender.com` — mở thẳng URL đó bằng Safari.
+6. Free tier sẽ "ngủ" sau ~15 phút không ai truy cập, lần mở lại đầu tiên chậm khoảng 30-50s — bình thường.
+
+### Cách B — GitHub Codespaces
+
+1. Mở repo trên github.com bằng Safari → nút **Code** → tab **Codespaces** → **Create codespace on <branch>**.
+2. Trong terminal của Codespace (giao diện VS Code trên web): chạy `pip install -r requirements.txt`, tạo file `.env` với `RIOT_API_KEY` và `REGION=vn2`, rồi chạy `python run.py`.
+3. Codespaces tự phát hiện port 8000 đang mở, hiện thông báo/nút **Open in Browser** ở góc dưới — bấm để mở app trong tab Safari mới. Có thể đổi visibility của port sang **Public** ở tab **Ports** nếu muốn share link cho người khác.
+4. Free tier cá nhân: 60 giờ Codespaces/tháng miễn phí.
+
 ## Ghi chú
 
 - **Firewall công ty chặn Riot API.** Chạy trên 4G/VPN/mạng nhà. Dữ liệu đã quét được cache, mất mạng vẫn xem lại được.
